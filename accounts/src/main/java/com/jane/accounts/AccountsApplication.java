@@ -1,5 +1,6 @@
 package com.jane.accounts;
 
+import com.jane.accounts.dto.AccountsContactInfo;
 import io.swagger.v3.oas.annotations.OpenAPIDefinition;
 import io.swagger.v3.oas.annotations.info.Contact;
 import io.swagger.v3.oas.annotations.info.Info;
@@ -7,6 +8,7 @@ import io.swagger.v3.oas.annotations.info.License;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 
 @SpringBootApplication
@@ -14,6 +16,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 @EnableJpaRepositories("com.jane.accounts.repository")
 @EntityScan("com.jane.accounts.model")*/
 @EnableJpaAuditing(auditorAwareRef = "auditAwareImpl")
+@EnableConfigurationProperties(AccountsContactInfo.class)
 @OpenAPIDefinition(info = @Info(
 		title = "Account microservice REST APIs Documentation",
 		description = "JaneBank account microservice REST API documentation",
