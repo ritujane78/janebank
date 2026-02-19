@@ -1,15 +1,11 @@
 spring:
   application:
-    name: cards
+    name: accounts
   datasource:
     url: jdbc:h2:mem:testdb
     driverClassName: org.h2.Driver
     username: root
     password: root
-  profiles:
-    active: qa
-  config:
-    import: optional:configserver:http://localhost:8071/
   h2:
     console:
       enabled: true
@@ -18,5 +14,14 @@ spring:
     hibernate:
       ddl-auto: update
     show-sql: true
-server:
-  port: 9000
+build:
+  version: 3.0
+accounts:
+  message: Welcome to Janebank accounts related local APIs
+  contactDetails:
+    name: "Jane Doe - Developer"
+    email: "jane@janebank.com"
+  onCallSupport:
+    - (555) 555-1234
+    - (555) 523-1345
+
