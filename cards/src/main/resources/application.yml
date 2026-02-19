@@ -6,6 +6,13 @@ spring:
     driverClassName: org.h2.Driver
     username: root
     password: root
+  config:
+    import:
+      - "application_qa.yml"
+      - "application_prod.yml"
+  profiles:
+    active:
+      "prod"
   h2:
     console:
       enabled: true
