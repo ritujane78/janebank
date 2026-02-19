@@ -6,7 +6,7 @@ spring:
 build:
   version: "2.0"
 
-accounts:
+cards:
   message: "Welcome to JaneBank cards related QA APIs "
   contactDetails:
     name: "Will Smith - QA Lead"

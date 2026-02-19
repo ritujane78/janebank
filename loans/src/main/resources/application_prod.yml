@@ -6,7 +6,7 @@ spring:
 build:
   version: "1.0"
 
-accounts:
+loans:
   message: "Welcome to JaneBank loans related prod APIs "
   contactDetails:
     name: "Rain Wilson - Product Owner"
