@@ -1,6 +1,11 @@
 spring:
   application:
     name: configserver
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
   profiles:
     active:
 #    native
@@ -18,3 +23,9 @@ spring:
 #          search-locations: classpath:/config
 server:
   port: 8071
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
