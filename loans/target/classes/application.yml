@@ -9,9 +9,6 @@ spring:
     driverClassName: org.h2.Driver
     username: root
     password: root
-  profiles:
-    active:
-      "qa"
   config:
     import: optional:configserver:http://localhost:8071/
   h2:
