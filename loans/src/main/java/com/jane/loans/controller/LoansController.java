@@ -33,10 +33,10 @@ import org.springframework.web.bind.annotation.*;
 )
 @RestController
 @RequestMapping(path = "/api", produces = {MediaType.APPLICATION_JSON_VALUE})
-@RequiredArgsConstructor
 @Validated
 public class LoansController {
 
+    @Autowired
     private ILoansService iLoansService;
 
     @Autowired

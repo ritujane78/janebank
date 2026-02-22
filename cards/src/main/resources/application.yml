@@ -1,26 +1,19 @@
 spring:
   application:
     name: cards
+  profiles:
+    active: qa
   datasource:
-    url: jdbc:h2:mem:testdb
-    driverClassName: org.h2.Driver
+    url: jdbc:mysql://localhost:3306/cardsdb
     username: root
     password: root
+  jpa:
+    show-sql: true
+  sql:
+    init:
+      mode: always
   config:
     import: optional:configserver:http://localhost:8071/
-  h2:
-    console:
-      enabled: true
-  jpa:
-    database-platform: org.hibernate.dialect.H2Dialect
-    hibernate:
-      ddl-auto: update
-    show-sql: true
-  rabbitmq:
-    host: localhost
-    port: 5672
-    username: guest
-    password: guest
 server:
   port: 9000
 management:
