@@ -40,6 +40,7 @@ import org.springframework.web.bind.annotation.*;
 @Validated
 public class AccountsController {
 
+    @Autowired
     private IAccountsService accountsService;
 
     @Value("${build.version}")
