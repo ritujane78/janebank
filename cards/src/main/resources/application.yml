@@ -42,3 +42,8 @@ eureka:
       name: "cards"
       description: "Jane Bank Cards Application"
       version: "1.0.0"
+  logging:
+    level:
+      com:
+        jane:
+          cards: DEBUG

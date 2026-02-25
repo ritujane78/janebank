@@ -32,7 +32,7 @@ public class GatewayserverApplication {
 						.path("/janebank/cards/**")
 						.filters(f -> f.rewritePath("/janebank/cards/(?<segment>.*)", "/${segment}")
 								.addResponseHeader("X-Response-Time", LocalDateTime.now().toString()))
-						.uri("lb://ACCOUNTSCARDS")).build();
+						.uri("lb://CARDS")).build();
 	}
 
 }
