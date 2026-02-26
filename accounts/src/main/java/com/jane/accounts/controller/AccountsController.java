@@ -8,6 +8,7 @@ import com.jane.accounts.dto.ResponseDto;
 import com.jane.accounts.entity.Customer;
 import com.jane.accounts.service.AccountsServiceImpl;
 import com.jane.accounts.service.IAccountsService;
+import io.github.resilience4j.retry.annotation.Retry;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;
@@ -18,6 +19,8 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.Pattern;
 import lombok.AllArgsConstructor;
 import lombok.RequiredArgsConstructor;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.context.properties.ConfigurationProperties;
@@ -52,6 +55,7 @@ public class AccountsController {
     @Autowired
     private AccountsContactInfo accountsContactInfo;
 
+    private Logger logger = LoggerFactory.getLogger(AccountsController.class);
     @Operation(
             summary = "Create Account REST API",
             description = "REST API to create new Customer &  Account inside JaneBank"
@@ -199,9 +203,16 @@ public class AccountsController {
             )
     }
     )
-    @GetMapping("/version-info")
-    public ResponseEntity<String> versionInfo() {
-        return ResponseEntity.status(HttpStatus.OK).body(buildVersion);
+    @Retry(name = "buildInfo", fallbackMethod = "getBuildInfoFallback")
+    @GetMapping("/build-info")
+    public ResponseEntity<String> getBuildInfo() {
+        logger.debug("getBuildInfo() method invoked.");
+        throw new NullPointerException();
+//        return ResponseEntity.status(HttpStatus.OK).body(buildVersion);
+    }
+    public ResponseEntity<String> getBuildInfoFallback(Throwable throwable) {
+        logger.debug("getBuildInfoFallback() method invoked.");
+        return ResponseEntity.status(HttpStatus.OK).body("0.9");
     }
 
     @Operation(

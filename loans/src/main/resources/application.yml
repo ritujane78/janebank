@@ -43,8 +43,8 @@ eureka:
       name: "loans"
       description: "Jane Bank Loans Application"
       version: "1.0.0"
-  logging:
-    level:
-      com:
-        jane:
-          loans: DEBUG
+logging:
+  level:
+    com:
+      jane:
+        loans: DEBUG

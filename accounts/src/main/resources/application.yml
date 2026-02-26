@@ -31,6 +31,13 @@ management:
   info:
     env:
       enabled: true
+resilience4j.retry:
+  configs:
+    default:
+      max-attempts: 3
+      wait-duration: 100
+      enable-exponential-backoff: true
+      exponential-backoff-multiplier: 2
 
 resilience4j.circuitbreaker:
   configs:
