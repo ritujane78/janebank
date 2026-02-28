@@ -70,7 +70,7 @@
 				<version>3.5.1</version>
 				<configuration>
 					<to>
-						<image>ritujane78/${project.artifactId}:6</image>
+						<image>ritujane78/${project.artifactId}:7</image>
 					</to>
 				</configuration>
 			</plugin>
