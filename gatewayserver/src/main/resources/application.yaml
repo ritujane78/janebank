@@ -27,6 +27,9 @@ management:
     web:
       exposure:
         include: "*"
+  metrics:
+    tags:
+      application: ${spring.application.name}
   endpoint:
     gateway:
       access: unrestricted
