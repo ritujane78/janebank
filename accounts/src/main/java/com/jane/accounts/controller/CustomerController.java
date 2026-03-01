@@ -57,8 +57,9 @@ public class CustomerController {
                                                                 @RequestParam @Pattern(regexp = "(^$|[0-9]{10})", message = "Mobile number should be 10 digits long.")
                                                                    String mobileNumber) {
 
-        log.debug("janebank=-correlation-id found: {}", correlationId);
+        log.debug("fetchCustomersDetails method start");
         CustomerDetailsDto customerDetailsDto = customerService.fetchCustomerDetails(mobileNumber, correlationId);
+        log.debug("fetchCustomersDetails method end");
 
         return ResponseEntity
                 .status(HttpStatus.OK)
