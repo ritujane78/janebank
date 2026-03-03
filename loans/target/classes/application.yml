@@ -10,7 +10,7 @@ spring:
     username: root
     password: root
   config:
-    import: optional:configserver:http://configserver:8071/
+    import: optional:configserver:http://configserver:8071/ # use localhost instead of configserver when running locally
   h2:
     console:
       enabled: true
@@ -48,7 +48,7 @@ eureka:
     fetchRegistry: true
     registerWithEureka: true
     serviceUrl:
-      defaultZone: http://eurekaserver:8070/eureka/
+      defaultZone: http://eurekaserver:8070/eureka/ # use localhost instead of eurekaserver when running locally
   info:
     app:
       name: "loans"
@@ -60,4 +60,4 @@ logging:
       jane:
         loans: DEBUG
   pattern:
-    level: "%5p[${spring.application.name},%X{trace_id}%X{span_id}]"
+    level: "%5p[${spring.application.name},%X{trace_id},%X{span_id}]"

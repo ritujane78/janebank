@@ -2,7 +2,12 @@ spring:
   application:
     name: gatewayserver
   config:
-    import: optional:configserver:http://configserver:8071/
+    import: optional:configserver:http://configserver:8071/ # use localhost instead of serverserver when running locally
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          jwk-set-uri: "http://localhost:7080/realms/master/protocol/openid-connect/certs"
   cloud:
    gateway:
      server:
@@ -21,7 +26,7 @@ eureka:
     fetchRegistry: true
     registerWithEureka: true
     serviceUrl:
-      defaultZone: http://eurekaserver:8070/eureka/
+      defaultZone: http://eurekaserver:8070/eureka/ # use localhost instead of eurekaserver when running locally
 management:
   endpoints:
     web:
@@ -55,3 +60,5 @@ resilience4j.circuitbreaker:
         permitted-number-of-calls-in-half-open-state: 2
         failure-rate-threshold: 50
         wait-duration-in-open-state: 10000
+server:
+  port: 8072
