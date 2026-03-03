@@ -15,7 +15,7 @@ spring:
       ddl-auto: update
     show-sql: true
   config:
-    import: optional:configserver:http://configserver:8071/
+    import: optional:configserver:http://configserver:8071/ # use localhost instead of configserver when running locally
   cloud:
     openfeign:
       circuitbreaker:
@@ -70,7 +70,7 @@ eureka:
     fetchRegistry: true
     registerWithEureka: true
     serviceUrl:
-      defaultZone: http://eurekaserver:8070/eureka/
+      defaultZone: http://eurekaserver:8070/eureka/ # use localhost instead of eurekaserver when running locally
 info:
   app:
     name: "accounts"
