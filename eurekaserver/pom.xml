@@ -81,7 +81,7 @@
 				<version>3.5.1</version>
 				<configuration>
 					<to>
-						<image>ritujane78/${project.artifactId}:8</image>
+						<image>ritujane78/${project.artifactId}:9</image>
 					</to>
 				</configuration>
 			</plugin>
