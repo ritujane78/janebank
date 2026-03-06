@@ -1,1 +1,0 @@
-# Accounts microservice (in progress)
