@@ -1,0 +1,27 @@
+dependencies:
+- name: janebank
+  repository: file://../../janebank
+  version: 0.1.0
+- name: configserver
+  repository: file://../../janebank-services/configserver
+  version: 0.1.0
+- name: eurekaserver
+  repository: file://../../janebank-services/eurekaserver
+  version: 0.1.0
+- name: accounts
+  repository: file://../../janebank-services/accounts
+  version: 0.1.0
+- name: cards
+  repository: file://../../janebank-services/cards
+  version: 0.1.0
+- name: loans
+  repository: file://../../janebank-services/loans
+  version: 0.1.0
+- name: gatewayserver
+  repository: file://../../janebank-services/gatewayserver
+  version: 0.1.0
+- name: message
+  repository: file://../../janebank-services/message
+  version: 0.1.0
+digest: sha256:28fd5d3f9917dd7c8d4ea8a51628baadba8790d3ee95fb9d2b112d68d7d39fbb
+generated: "2026-03-07T13:48:11.0566289+05:45"
