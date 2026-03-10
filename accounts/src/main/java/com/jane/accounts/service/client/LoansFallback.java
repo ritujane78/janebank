@@ -1,6 +1,6 @@
 package com.jane.accounts.service.client;
 
-import com.jane.accounts.dto.CardsDto;
+
 import com.jane.accounts.dto.LoansDto;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

@@ -2,7 +2,7 @@ spring:
   application:
     name: eurekaserver
   config:
-    import: optional:configserver:http://configserver:8071/ # use localhost instead of configserver when running locally
+    import: optional:configserver:http://localhost:8071/ # use localhost instead of configserver when running locally
 server:
   port: 8070
 eureka:
@@ -10,7 +10,7 @@ eureka:
     register-with-eureka: false
     fetch-registry: false
     service-url:
-      defaultZone: http://eurekaserver:8070/eureka/ # use localhost instead of eurekaserver when running locally
+      defaultZone: http://localhost:8070/eureka/ # use localhost instead of eurekaserver when running locally
 management:
   endpoints:
     web:

@@ -10,7 +10,7 @@ public interface IAccountsService {
      * @param customerDto - CustomerDto Object
      */
     void createAccount(CustomerDto customerDto);
-    CustomerDto getAccount(@RequestParam String mobileNumber);
+    CustomerDto getAccount(@RequestParam("mobileNumber") String mobileNumber);
     boolean updateAccount(CustomerDto customerDto);
 
 

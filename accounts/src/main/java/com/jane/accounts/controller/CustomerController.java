@@ -54,7 +54,7 @@ public class CustomerController {
     )
     @GetMapping("/api/fetchCustomerDetails")
     public ResponseEntity<CustomerDetailsDto> fetchCustomerDetails( @RequestHeader("janebank-correlation-id") String correlationId,
-                                                                @RequestParam @Pattern(regexp = "(^$|[0-9]{10})", message = "Mobile number should be 10 digits long.")
+                                                                @RequestParam("mobileNumber") @Pattern(regexp = "(^$|[0-9]{10})", message = "Mobile number should be 10 digits long.")
                                                                    String mobileNumber) {
 
         log.debug("fetchCustomersDetails method start");
