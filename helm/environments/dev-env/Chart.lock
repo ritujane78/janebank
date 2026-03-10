@@ -23,5 +23,5 @@ dependencies:
 - name: message
   repository: file://../../janebank-services/message
   version: 0.1.0
-digest: sha256:d9aec855311f72286a711322734358fd90d61e7ab0e8ef80dea05b637e020544
-generated: "2023-09-01T12:06:31.531688+05:30"
+digest: sha256:28fd5d3f9917dd7c8d4ea8a51628baadba8790d3ee95fb9d2b112d68d7d39fbb
+generated: "2026-03-09T16:39:21.614289+05:45"

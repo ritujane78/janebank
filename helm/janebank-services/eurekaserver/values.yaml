@@ -1,15 +1,15 @@
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
 
-deploymentName: eurekasrver-deployment
-serviceName: eurekasrver
-appLabel: eurekasrver
-appName: eurekasrver
+deploymentName: eurekaserver-deployment
+serviceName: eurekaserver
+appLabel: eurekaserver
+appName: eurekaserver
 
 replicaCount: 1
 
 image:
-  repository: ritujane78/eurekasrver
+  repository: ritujane78/eurekaserver
   tag: 9
 
 containerPort: 8070
