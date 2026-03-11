@@ -25,7 +25,7 @@ The system follows a microservices architecture built using the Spring ecosystem
 
 ## Microservices
 
-1. Accounts Service
+## 1. Accounts Service
 
 Responsible for managing customer bank accounts.
 
@@ -39,7 +39,7 @@ Responsible for managing customer bank accounts.
 
 - REST APIs for account operations
 
-2. Loans Service
+## 2. Loans Service
 
 - Handles loan-related functionality.
 
@@ -51,7 +51,7 @@ Responsible for managing customer bank accounts.
 
 - Manage loan records
 
-3. Cards Service
+## 3. Cards Service
 
 Manages credit card data.
 
